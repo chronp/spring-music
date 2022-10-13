@@ -2,7 +2,6 @@ kind: Deployment
 apiVersion: apps/v1
 metadata:
   name: spring-music
-  namespace: citi-poc
   labels:
     app: spring-music
 spec:
@@ -21,7 +20,7 @@ spec:
       containers:
         - name: spring-music
           image: >-
-            harbor.dell.local/library/spring-music@sha256:db9bb94e6bb4e22e9c150572a415965db21205fe767ac4941c25e91af9f6e6b9
+            10.10.10.1/spring-music
           ports:
             - containerPort: 8080
               protocol: TCP
